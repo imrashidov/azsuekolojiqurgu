@@ -173,7 +173,7 @@ body {
   @apply flex items-center gap-4;
 }
 .management-person img {
-  @apply w-[100px] h-[100px] rounded-full  object-contain bg-[#BEBFC2];
+  @apply w-[100px] h-[100px] rounded-full object-contain bg-[#BEBFC2];
 }
 .person-description h6 {
   @apply font-bold text-blueSecondary;
