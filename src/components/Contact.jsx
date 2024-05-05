@@ -16,6 +16,12 @@ const Contact = () => {
                     <p>(+994 50) 213-20-63</p>
                     <p>(+994 70) 715-55-00</p>
                   </span>
+                </div>{" "}
+                <div className="contact-item">
+                  <h3>Elektron poçt:</h3>
+                  <span>
+                    <p>azsu.ekoqurgu@mail.ru</p>
+                  </span>
                 </div>
                 <div className="contact-item">
                   <h3>Ünvan:</h3>

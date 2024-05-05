@@ -5,6 +5,7 @@ import "swiper/css/pagination";
 import data from "../data/data";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
+import { MdAlternateEmail } from "react-icons/md";
 
 const Hero = () => {
   return (
@@ -18,6 +19,12 @@ const Hero = () => {
                 <p>(+994 12) 408-72-45</p>
                 <p>(+994 50) 213-20-63</p>
                 <p>(+994 70) 715-55-00</p>
+              </span>
+            </div>
+            <div className="hero-contact-item">
+              <MdAlternateEmail />
+              <span>
+                <p>azsu.ekoqurgu@mail.ru</p>
               </span>
             </div>
             <div className="hero-contact-item">

@@ -8,6 +8,7 @@ import { IoCloseOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
+import { MdAlternateEmail } from "react-icons/md";
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
 
@@ -71,6 +72,12 @@ const Navbar = () => {
                   </ul>
                 </div>
                 <div className="nav-menu-contact">
+                  <div className="nav-menu-contact-item">
+                    <MdAlternateEmail />
+                    <span>
+                      <p>azsu.ekoqurgu@mail.ru</p>
+                    </span>
+                  </div>
                   <div className="nav-menu-contact-item">
                     <FaPhoneAlt />
                     <span>
