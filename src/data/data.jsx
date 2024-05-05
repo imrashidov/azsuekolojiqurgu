@@ -7,6 +7,7 @@ import person2 from "../assets/Management/person2.png";
 import person3 from "../assets/Management/person3.png";
 import person4 from "../assets/Management/person4.png";
 import person5 from "../assets/Management/person5.png";
+import person6 from "../assets/Management/person6.png";
 // Gallery
 import gallery1 from "../assets/Gallery/gallery1.jpg";
 import gallery2 from "../assets/Gallery/gallery2.jpg";
@@ -82,13 +83,20 @@ const data = {
     {
       id: 4,
       img: person4,
+      name: "Şövlə",
+      surname: "Zeynalova",
+      role: "Baş mühasib",
+    },
+    {
+      id: 5,
+      img: person5,
       name: "Aydın",
       surname: "Cabbarlı",
       role: "Təsərrüfat Müdiri",
     },
     {
-      id: 5,
-      img: person5,
+      id: 6,
+      img: person6,
       name: "Hafiz",
       surname: "Eminov",
       role: "Sahə Rəisi",
