@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import logo from "../assets/header-logo.png";
 import logo2 from "../assets/logo.png";
-import data from "../data/data";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoCloseOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
@@ -13,6 +12,29 @@ import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const navbarRoutes = [
+    {
+      id: 1,
+      path: "/#about",
+      name: "Haqqımızda",
+    },
+    {
+      id: 2,
+      path: "/#management",
+      name: "Rəhbərlik",
+    },
+    {
+      id: 3,
+      path: "/#gallery",
+      name: "Qalereya",
+    },
+    {
+      id: 4,
+      path: "/#contact",
+      name: "Bizimlə Əlaqə",
+    },
+  ];
+
   const location = useLocation();
   const isNewsPage = location.pathname.includes("/news");
 
@@ -49,7 +71,7 @@ const Navbar = () => {
                 </div>
                 <div className="nav-menu-links">
                   <ul>
-                    {data.navbarRoutes.map((route) => (
+                    {navbarRoutes.map((route) => (
                       <li key={route.id}>
                         <HashLink
                           to={route.path}
@@ -110,7 +132,7 @@ const Navbar = () => {
           </motion.button>
           <div className="nav-links">
             <ul>
-              {data.navbarRoutes.slice(0, 2).map((route) => (
+              {navbarRoutes.slice(0, 2).map((route) => (
                 <li key={route.id}>
                   <HashLink
                     scroll={(el) =>
@@ -131,7 +153,7 @@ const Navbar = () => {
           </div>
           <div className="nav-links">
             <ul>
-              {data.navbarRoutes.slice(2, 4).map((route) => (
+              {navbarRoutes.slice(2, 4).map((route) => (
                 <li key={route.id}>
                   <HashLink
                     to={route.path}

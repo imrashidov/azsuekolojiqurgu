@@ -1,23 +1,28 @@
-import data from "../data/data";
-
-const NewsItem = () => {
+import PropTypes from "prop-types";
+const NewsItem = ({ news }) => {
   return (
     <>
-      {data.newsItems.map((item) => (
-        <div className="news-item" key={item.id}>
-          <div className="news-item-content">
-            <h6>{item.title}</h6>
-            <p className="text-lg">{item.description}</p>
-            <div className="news-item-images">
-              {item.images.map((image) => (
-                <img src={image} alt={item.title} key={image} />
-              ))}
-            </div>
+      <div className="news-item">
+        <div className="news-item-content">
+          <h6>{news.title}</h6>
+          <p className="text-lg">{news.content}</p>
+          <div className="news-item-images">
+            {news.images.map((image, index) => (
+              <img src={image} alt={news.title} key={index} />
+            ))}
           </div>
         </div>
-      ))}
+      </div>
     </>
   );
+};
+
+NewsItem.propTypes = {
+  news: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired,
+    images: PropTypes.arrayOf(PropTypes.string).isRequired,
+  }).isRequired,
 };
 
 export default NewsItem;

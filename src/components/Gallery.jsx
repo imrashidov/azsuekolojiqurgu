@@ -1,12 +1,34 @@
-import data from "../data/data";
-import React, { useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
+import { message } from "antd";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 const Gallery = () => {
+  const [gallery, setGallery] = useState([]);
+  const apiUrl = import.meta.env.VITE_API_BASE_URL;
+
+  // Fetch data
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`${apiUrl}/api/galleries`);
+        if (response.ok) {
+          const data = await response.json();
+          setGallery(data);
+        } else {
+          message.error("Galereya yüklənərkən xəta baş verdi");
+        }
+      } catch (error) {
+        console.log(error);
+        message.error("Server error. Please try again later.");
+      }
+    };
+    fetchData();
+  }, [apiUrl]);
+
   return (
     <section id="gallery">
       <div className="gallery-container">
@@ -57,10 +79,10 @@ const Gallery = () => {
                   },
                 }}
               >
-                {data.galleryItems.map((img) => (
-                  <SwiperSlide key={img.id}>
+                {gallery.map((img) => (
+                  <SwiperSlide key={img._id}>
                     <img
-                      src={img.img}
+                      src={img.galleryImage}
                       alt="Gallery"
                       className="h-full w-full"
                     />

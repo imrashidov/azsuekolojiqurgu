@@ -1,12 +1,11 @@
 import { CiClock1 } from "react-icons/ci";
-import data from "../data/data";
-
-const LatestNewsItem = () => {
+const LatestNewsItem = ({ news }) => {
+  console.log(news);
   return (
     <>
-      {data.latestNewsItem.map((item) => (
-        <div className="latest-news-item" key={item.id}>
-          <img src={item.img} alt="news1" />
+      {news.slice(0, 4).map((item) => (
+        <div className="latest-news-item" key={item._id}>
+          <img src={item.images[1]} alt="Latest News" />
           <h6>{item.title}</h6>
           <div className="latest-news-date">
             <CiClock1 />

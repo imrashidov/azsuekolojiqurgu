@@ -2,12 +2,23 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import data from "../data/data";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdAlternateEmail } from "react-icons/md";
+import hero1 from "../assets/Hero/hero.jpg";
+import hero2 from "../assets/Hero/hero2.jpg";
 
 const Hero = () => {
+  const heroSwiper = [
+    {
+      id: 1,
+      img: hero1,
+    },
+    {
+      id: 2,
+      img: hero2,
+    },
+  ];
   return (
     <section id="hero">
       <div className="hero-container">
@@ -53,7 +64,7 @@ const Hero = () => {
             },
           }}
         >
-          {data.heroSwiper.map((swiper) => (
+          {heroSwiper.map((swiper) => (
             <SwiperSlide key={swiper.id} className="swiper-hero-slide">
               <img src={swiper.img} alt="Hero Image" />
             </SwiperSlide>

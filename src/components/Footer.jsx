@@ -1,9 +1,30 @@
 import logo from "../assets/logo.png";
-import data from "../data/data";
 import { FaChevronUp } from "react-icons/fa6";
 import { HashLink } from "react-router-hash-link";
 
 const Footer = () => {
+  const footerRoutes = [
+    {
+      id: 1,
+      path: "/#about",
+      name: "Haqqımızda",
+    },
+    {
+      id: 2,
+      path: "/#management",
+      name: "Rəhbərlik",
+    },
+    {
+      id: 3,
+      path: "/#gallery",
+      name: "Qalereya",
+    },
+    {
+      id: 4,
+      path: "/#contact",
+      name: "Bizimlə Əlaqə",
+    },
+  ];
   return (
     <footer>
       <div className="footer-container">
@@ -11,7 +32,7 @@ const Footer = () => {
           <img src={logo} alt="Logo" />
           <div className="footer-routes">
             <ul>
-              {data.navbarRoutes.map((route) => (
+              {footerRoutes.map((route) => (
                 <li key={route.id}>
                   <HashLink
                     to={route.path}
