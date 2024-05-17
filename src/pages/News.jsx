@@ -22,7 +22,6 @@ const News = () => {
           message.error("Xəbər yüklənərkən xəta baş verdi");
         }
       } catch (error) {
-        console.log(error);
         message.error("Server error. Please try again later.");
       }
     };
