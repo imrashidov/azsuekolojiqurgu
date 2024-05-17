@@ -15,7 +15,7 @@ const Management = () => {
           const data = await response.json();
           setManagement(data);
         } else {
-          message.error("Galereya yüklənərkən xəta baş verdi");
+          message.error("Rəhbərlik yüklənərkən xəta baş verdi");
         }
       } catch (error) {
         console.log(error);
